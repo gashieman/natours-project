@@ -1,0 +1,155 @@
+.btn-main {
+    &:link {
+        background-color:$color-secondary;
+    }
+    
+    &:hover{
+        background-color:darken($color-secondary, 15%);
+    }
+    
+    
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+$color-primary:red; 
+$color-secondary:yellow; 
+$color-tertiary:purple; 
+
+$width-button:150px;
+$colo-text-light:#fff;
+nav {
+    margin:30px;
+    background-color:$color-primary;
+}
+
+.navigation{
+    list-style:none;
+    float:left;
+    
+    &::after {
+        content:"";
+        clear:both;
+        display:table;
+}
+    
+    li {
+        display : inline-block;
+        margin-left:30px;
+        
+        &:first-child{
+         margin:0;
+        }
+         
+        a:link {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-tertiary;
+        } 
+        
+    }
+}
+
+.buttons{
+    float:right;
+}
+
+.btn-main:link,
+.btn-hot:link{
+    padding:10px;
+    display: inline-block;
+    text-align: center;
+    border-radius:100px;
+    text-decoration:none;
+    text-transform:uppercase;
+    width:$width-button;
+    
+}
+
+.btn-main {
+    &:link {
+        background-color:$color-secondary;
+    }
+    
+    &:hover{
+        background-color:darken($color-secondary, 15%);
+    }
+    
+    
+}
+
+.btn-hot {
+    &:link {
+        background-color:$color-primary;
+    }
+    
+    &:hover{
+        background-color:lighten($color-secondary, 15%);
+    }
+    
+    
+}
+
+
+
+    }
+}
+
+.buttons{
+    float:right;
+}
+
+%btn-placeholder{
+    padding:10px;
+    display: inline-block;
+    text-align: center;
+    border-radius:100px;
+    width:$width-button;
+    @include style-link-text($color-text-dark);
+
+}
+    
+
+
+.btn-main {
+    &:link {
+        @extend %btn-placeholder;
+        background-color:$color-secondary;
+    }
+    
+    &:hover{
+         @extend %btn-placeholder;
+         background-color:darken($color-secondary, 15%);
+    }
+    
+    
+}
+
+.btn-hot {
+    &:link {
+        @extend %btn-placeholder;
+        background-color:$color-primary;
+    }
+    
+    &:hover{
+        background-color:lighten($color-secondary, 15%);
+    }
+    
+    
+}
+
+-----------------------------------------------------
+<nav>
+    <ul class="navigation">
+        <li><a href="#">About Us</a></li>
+         <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact us</a></li>
+    </ul>
+    <div class="buttons">
+        <a class= "btn-main" href="#">Sign Up</a>
+        <a class= "btn-hot" href="#">Get a Quote</a>
+    </div>
+</nav>
